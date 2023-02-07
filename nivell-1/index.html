@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./sass/main.css">
+    <title>Intro a Bootstrap i SASS</title>
+    <link rel="icon" href="/nivell-1/assets/Imagenes/favicon-32x32.png">
+</head>
+<body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                  <img src="/nivell-1/assets/Imagenes/logo-bookmark.svg" alt="Logo de Bookmark" width="150" class="d-inline-block align-text-top">
+              </a>
+              <div class="collapse navbar-collapse d-block d-lg-flex justify-content-end p-1" id="navbarNavAltMarkup">
+                  <div class="navbar-nav gap-4">
+                      <a class="nav-link" aria-current="page" href="#">FEATURES</a>
+                      <a class="nav-link" href="#">PRICING</a>
+                      <a class="nav-link" href="#">CONTACT</a>
+                      <button class="btn btn-secondary text-white me-2" type="button">LOGIN</button>
+                  </div>
+              </div>
+          </div>
+      </nav>
+      <button class="hamburger" type="button">
+        <div class="bar"></div>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a class="nav-link" href="#"><img src="/nivell-1/assets/Imagenes/icon-close.svg" alt="Icono de cruz" width="10" class="d-inline-block "></a>
+      <a class="nav-link" aria-current="page" href="#">FEATURES</a>
+      <a class="nav-link" href="#">PRICING</a>
+      <a class="nav-link" href="#">CONTACT</a>
+      <button class="btn btn-secondary me-2" type="button">LOGIN</button>
+      <a class="nav-link" href="#"><img src="/nivell-1/assets/Imagenes/icon-facebook.svg" alt="Logo de Facebook" width="50" class="d-inline-block flex-row"></a>
+      <a class="nav-link" href="#"><img src="/nivell-1/assets/Imagenes/icon-twitter.svg" alt="Logo de Twitter" width="50" class="d-inline-block flex-row"></a>
+    </nav>
+    <main>
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-4 order-lg-1 order-sm-2 order-s-2 order-xs-2 mt-5">
+            <h1> A Simple Bookmark Manager</h1> 
+            <p class="text-muted"> A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+            <button class="btn btn-outline-primary me-2" type="button">Get it on Chrome</button>
+            <button class="btn btn-light bg light border me-2" type="button">Get it on Firefox</button>
+          </div>
+          <div class="col-lg-6 order-lg-1 order-sm-1 order-s-1 order-xs-1 overflow-hidden mt-2">
+            <img src="/nivell-1/assets/Imagenes/illustration-hero.svg" alt="Tablet con interfaz intuitiva" width="600" class=""></img>
+            <div class="square square-rounded-lg bg-primary d-flex justify-content-end p-5"></div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-5 col-md-12">
+            <h2 class="d-flex justify-content-center m-2">Features</h2>
+            <p class="d-flex text-muted text-center">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-12 col-md-6 ">
+            <nav>
+              <div class="nav nav-tabs d-flex justify-content-center text-dark gap-4" id="nav-tab" role="tablist">
+                <button class="nav-link active text-dark" id="nav-bookmark-tab" data-bs-toggle="tab" data-bs-target="#nav-bookmark" type="button" role="tab" aria-controls="nav-bookmark" aria-selected="true">Simple bookmarking</button>
+                <button class="nav-link text-dark" id="nav-search-tab" data-bs-toggle="tab" data-bs-target="#nav-search" type="button" role="tab" aria-controls="nav-search" aria-selected="false">Speedy searching</button>
+                <button class="nav-link text-dark" id="nav-share-tab" data-bs-toggle="tab" data-bs-target="#nav-share" type="button" role="tab" aria-controls="nav-share" aria-selected="false">Easy sharing</button>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-bookmark" role="tabpanel" aria-labelledby="nav-bookmark-tab">
+            <div class="row">
+              <div class="col-lg-8 mt-5">
+                <img src="/nivell-1/assets/Imagenes/illustration-features-tab-1.svg" alt="Web con interfaz con dos columnas" width="500" class="">
+                <div class="square square-rounded-lg bg-primary p-2"></div>
+              </div>
+              <div class="col-lg-4 mt-5">
+                <h2>Bookmark in one click</h2>
+                <p class= "text-muted">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you imagine your favourite sites.</p>
+                <button class="btn btn-outline-primary me-" type="button">More info</button>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-search" role="tabpanel" aria-labelledby="nav-search-tab">
+            <div class="row">
+              <div class="col-lg-6 mt-5">
+                <img src="/nivell-1/assets/Imagenes/illustration-features-tab-2.svg" alt="Tablet con interfaz intuitiva" width="500" class="mr-5">
+                <div class="square square-rounded-lg bg-primary p-3"></div>
+              </div>
+              <div class="col-lg-6 mt-5">
+                <h2>Intelligent search</h2>
+                <p class= "text-muted">Our powerful search feature will help you find saved sites in no time at all. No need to trawl around through all of your bookmarks.</p>
+                <button class="btn btn-outline-primary me-2" type="button">More info</button>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-share" role="tabpanel" aria-labelledby="nav-share-tab">
+            <div class="row">
+              <div class="col-lg-6 mt-5">
+                <img src="/nivell-1/assets/Imagenes/illustration-features-tab-3.svg" alt="Tablet con interfaz intuitiva" width="500" class="mr-5">
+                <div class="square square-rounded-lg bg-primary p-3"></div>
+              </div>
+              <div class="col-lg-6 mt-5">
+                <h2>Share your bookmarks</h2>
+                <p class= "text-muted">Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button</p>
+                <button class="btn btn-outline-primary me-2" type="button">More info</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-5 col-md-6">
+            <h2 class="d-flex justify-content-center mt-3">Download the extension</h2>
+            <p class="d-flex justify-content-center text-center text-muted mt-2"> We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>  
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-12 mt-5">
+            <div class="card shadow bg-white rounded">
+              <img src="/nivell-1/assets/Imagenes/logo-chrome.svg" class="card-img-top" alt="Icono de Google Chrome">
+              <div class="card-body text-center">
+                <h3 class="card-title">Add to Chrome</h3>
+                <p class="card-text">Minimum version 62</p>
+                <img src="/nivell-1/assets/Imagenes/bg-dots.svg" class="card-img-bg" alt="Puntos de separación">
+                <a href="#" class="btn btn-primary" id="button-extension">Add & install Extension</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12 mt-5">
+            <div class="card shadow bg-white rounded">
+                <img src="/nivell-1/assets/Imagenes/logo-firefox.svg" class="card-img-middle" alt="Icono de Google Chrome">
+                <div class="card-body text-center">
+                  <h3 class="card-title">Add to Firefox</h3>
+                  <p class="card-text">Minimum version 55</p>
+                  <img src="/nivell-1/assets/Imagenes/bg-dots.svg" class="card-img-bg" alt="Puntos de separación">
+                  <a href="#" class="btn btn-primary" id="button-extension">Add & install Extension</a>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12 mt-5">
+            <div class="card shadow bg-white rounded">
+              <img src="/nivell-1/assets/Imagenes/logo-opera.svg" class="card-img-bottom" alt="Icono de Opera">
+              <div class="card-body text-center">
+                <h3 class="card-title">Add to Opera</h3>
+                <p class="card-text">Minimum version 46</p>
+                <img src="/nivell-1/assets/Imagenes/bg-dots.svg" class="card-img-bg" alt="Puntos de separación">
+                <a href="#" class="btn btn-primary" id="button-extension">Add & install Extension</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-sm-12 mt-5">
+            <h2 class="d-flex justify-content-center text-center">Frequently Asked Questions</h2>
+            <p class="d-flex justify-content-center vertical-align-center text-center text-muted">Here are some of our FAQs. If you have any other questions you'd like to be answered please feel free to email us.</p>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        What is Bookmark?
+                      </button>
+                    </h3>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        How can I request a new browser?
+                      </button>
+                    </h3>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Is there a mobile app?
+                      </button>
+                    </h3>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="flush-headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        What about other Chromium browsers?
+                      </button>
+                    </h3>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    </div>
+                  </div>
+                </div>
+              <button class="btn btn-outline-primary" id="button-faq" type="button">More info</button>
+          </div>
+        </div>
+    </main>
+    <footer>
+      <div class="container-fluid bg-primary text-light mt-4 mx-0">
+        <div class="row d-flex justify-content-center">
+          <div class="col-3 text-light text-center">
+            <p class=" pt-4">35.000+ ALREADY JOINED</p>
+            <h2 class=" m-1">Stay up-to-date with what we're doing</h2>
+          </div>
+        </div>
+        <form action="" class="needs-validation" novalidate>
+          <div class="col-4">
+            <input class="form-control" type="email" class="email" id="email" name="email" placeholder="Enter your email adress" autocomplete="email" required>
+            <div class="invalid-feedback">Whoops, make sure it's an email</div>
+            <button type="submit" class="btn btn-outline-secondary btn-md">Contact us</button>
+          </div>
+        </form>
+      </div>
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light text-light bg-info" id="navbar-footer">
+          <a class="navbar-brand" href="#">
+            <img src="/nivell-1/assets/Imagenes/logo-bookmark.svg" width="100" alt="Logo de bookmark">
+          </a>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="#">FEATURES</a>
+              <a class="nav-item nav-link" href="#">PRICING</a>
+              <a class="nav-item nav-link" href="#">CONTACT</a>
+            </div>
+          </div>
+          <span class="navbar-text">
+            <a href="#" class="fa fa-facebook"><img src="/nivell-1/assets/Imagenes/icon-facebook.svg" width="25" alt="Logo de Facebook"></a>
+            <a href="#" class="fa fa-twitter"><img src="/nivell-1/assets/Imagenes/icon-twitter.svg" width="25" alt="Logo de Twitter"></a>
+          </span>
+        </nav>
+      </div>
+    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
