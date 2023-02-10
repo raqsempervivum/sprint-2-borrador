@@ -1,1 +1,19 @@
+@mixin button ($color, $bg, $border) {
+    color: $color;
+    background-color: $bg;
+    border-color: $border;
+}
+
+.btn-light {
+    &:hover{@include button(black,white,black,);}
+}
+
+.btn-primary {
+    color: white;
+    &:hover{@include button($primary, white, $primary,);}
+}
+.btn-secondary {
+    color: white;
+    &:hover{@include button($secondary, white, $secondary,);}
+}
 

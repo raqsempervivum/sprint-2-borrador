@@ -1,4 +1,17 @@
 
+$font-family-sans-serif: 'Rubik', sans-serif;
+$primary: #5265E1;
+$secondary: #FA5959; 
+$dark: rgb(1, 0, 56);
+$text-muted: rgb(167, 167, 167);
+$accordion-button-active-bg: white;
+$accordion-button-active-color: rgb(0, 0, 0);
+$accordion-button-focus-box-shadow: #9c141400;
+$accordion-icon-active-color: $secondary;
+$accordion-button-icon: url(/nivell-1/assets/Imagenes/icon-arrow.svg);
+$form-feedback-icon-invalid: url(/nivell-1/assets/Imagenes/icon-error.svg);
+$nav-tabs-link-active-color: black;
+$nav-tabs-link-hover-border-color: transparent;
 
 /* Another colours*/
 $white: rgb(255, 255, 255);
@@ -16,7 +29,8 @@ $theme-colors: (
 body {
     overflow-x: hidden;
 }
-/*hovers & states*/
+
+/**hovers & states*/
 
 .navbar .nav-link:hover {
     color: $secondary;
@@ -27,6 +41,7 @@ body {
 .nav .nav-link.active {
     color: black;
 }
+
 /* decorative pills*/
 .pill-1 {
     position: absolute;
