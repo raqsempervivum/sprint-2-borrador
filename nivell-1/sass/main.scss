@@ -1,111 +1,58 @@
-$font-family-sans-serif: 'Rubik', sans-serif;
-$primary: #5265E1;
-$secondary: #FA5959; 
-$accordion-button-active-bg: white;
-$accordion-button-active-color: rgb(0, 0, 0);
+
+
+/* Another colours*/
+$white: rgb(255, 255, 255);
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import "../sass/mixin.scss";
+
+
 
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
+  "dark": $dark,
 );
-
-
-
-header .btn:hover {
-    color:$secondary;
-    background-color: white;
-
-
+body {
+    overflow-x: hidden;
 }
-.nav-link:hover {
+/*hovers & states*/
+
+.navbar .nav-link:hover {
     color: $secondary;
 }
-
-
-/*first pill tablet*/
-
-.p-5 {
-    width: 30rem;
-    height: 20rem;
-    border-top-left-radius: 45%;
-    border-bottom-left-radius: 45%;
-    margin-top: 15em;
-    
-
+.nav .nav-link:hover {
+    color: $secondary;
 }
-
-.hamburger {
-    position: relative;
-    display: block;
-    width: 35px;
-    cursor: pointer;
-    appearance: none;
-    background: none;
-    outline: none;
-    border: none;
+.nav .nav-link.active {
+    color: black;
 }
-.hamburger .bar, .hamburger:after, .hamburger:before {
-    content: '';
-    display: block;
+/* decorative pills*/
+.pill-1 {
+    position: absolute;
+    height: 32%;
+    left: 70%;
+    right: 30%;
+    top: 30%;
     width: 100%;
-    height: 5px;
-    background-color: white;
-    margin: 6px 0px;
-    transition: .4s;
+    border-top-left-radius: 150px;
+    border-bottom-left-radius: 150px;
+    z-index: -1;
 
 }
-.hamburger-is-active:before {
-    transform: rotate(-45deg) translate(-8px, 6px);
+.pill-2 {
+    width:400%;
+    z-index: -1;
+    height: 40%;
+	top: 110%;
+	right: 62%;
+    border-top-right-radius: 200px;
+    border-bottom-right-radius: 200px;
+    position: absolute;
 }
-.hamburger.is-active:after {
-    transform: rotate(45deg) translate(-9px, -8px);
-}
-.hamburger-is-active .bar {
-    opacity: 0;
-}
-.mobile-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100vh;
-    display: block;
-    z-index: 98;
-    background-color: rgba(14, 14, 112, 0.685);
-    opacity: 95%;
-    padding-top: 120px;
-}
-.mobile-nav a {
-    display: block;
-    width: 100%;
-    max-width: 200px;
-    text-align: center;
-    margin-bottom: 1em;
-    padding: 1em;
-    color: white;
-}
-
-/*nav tabs*/ 
-#nav-bookmark {
-    margin-bottom: 25em;
-}
-/*pill nav tabs*/
-
-.p-2 {
-    width: 30rem;
-    height: 15rem;
-    border-top-right-radius: 35%;
-    border-bottom-right-radius: 45%;
-    display:flex;
-    position: relative;
-
-}
-
 /*FEATURES*/
 
-.gap-4 .nav-link.show, .gap-4 .nav-link.active{
+.gap-4 .nav-link.show, .gap-4 .nav-link.active {
     border-top: #FFFFFF;
     border-right: #FFFFFF;
     border-left: #FFFFFF;
@@ -113,20 +60,22 @@ header .btn:hover {
     border-radius: none;
     padding: 1.75em;
 }
-/*CARDS*/ 
 
+
+/*CARDS*/ 
+#card-middle {
+    margin-top: 5em;
+}
+
+#card-bottom {
+    margin-top: 10em;
+}
 #button-extension {
     padding: .75em 2em .75em 2em;
     margin-top: 2.5em;
     margin-bottom: .5em;
 }
 
-.card {
-    width: 18rem;
-    border-color: white;
-    display:flex;
-    align-items: center;
-}
 
 .card-img-top, .card-img-middle, .card-img-bottom {
     width: 10em;
@@ -134,30 +83,17 @@ header .btn:hover {
     margin-top: 1em;
     
 }
-/*ACCORDION*/
 
 /*FAQS*/ 
-.accordion  {
-    width: 50em;
 
+.accordion-item .accordion-header:active {
+    border-color: white;
 }
-.accordion-header:hover {
-    color: $secondary;
-}
-.accordion-button::after {
-    border-radius: none;
-    border-color: none;
-    color:#FA5959;
-}
+
+
+
 /*footer*/
-.mx-0 {
-    background-color: theme-color("dark");
-}
-.m-1 {
-    padding-bottom: 2px;
-    vertical-align: middle;
 
-}
 .invalid-feedback {
     color: white;
     background-color: $secondary;
@@ -165,45 +101,13 @@ header .btn:hover {
     text-indent: .75em;
 
 }
-.was-validated {
-    display: flex;
-    justify-content: center;
-    padding: 2em;
-}
+
 .fa-facebook:hover {
     filter: invert(73%) sepia(84%) saturate(5316%) hue-rotate(326deg) brightness(98%) contrast(101%);
 }
 .fa-twitter:hover {
-filter: invert(73%) sepia(84%) saturate(5316%) hue-rotate(326deg) brightness(98%) contrast(101%);
-}
-/*desktop*/
-@media (max-width: 1400px) {
-
+    filter: invert(73%) sepia(84%) saturate(5316%) hue-rotate(326deg) brightness(98%) contrast(101%);
 }
 
-/*tablet*/
-@media (min-width: 768px) {
-    
-    .mobile-nav {
-        display: none;
-    }
-    .hamburger {
-        display: none;
-    }
 
-}
 
-/*mobile*/
-@media only screen and (max-width: 576px) {
-    .hamburger{
-        display: block;
-    }    
-    .navbar-nav {
-        display: none;
-    }
-    .gap-4 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-}
